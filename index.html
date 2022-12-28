@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lecture 69-Javascript Class Inheritance</title>
+    <style></style>
+    <script></script>
+  </head>
+  <body>
+    <script>
+      class MyClassA {
+        //PascalCase
+
+        //member1
+
+        //member2
+
+        //member3
+        addition(x, y) {
+          //formal argumemt
+          //every function or method returtn something
+          return x + y; //statement
+        }
+      }
+
+      class MyClassB extends MyClassA {
+        //member1
+
+        //member2
+
+        //member3 Method/Function Defination
+        substraction(x, y) {
+          return x - y;
+        }
+      }
+      class MyClassC extends MyClassB {
+        //member1
+
+        //member2
+
+        //member3
+        multiplication(x, y) {
+          return x * y;
+        }
+      }
+
+      class MyClassD extends MyClassC {
+        //member1
+
+        //member2
+
+        //member3
+        division(x, y) {
+          return x / y;
+        }
+      }
+      //In order to call a method inside a class with you have to create class object..
+      //let Object= new ClassName();
+      //Object.Method();
+
+      //class inheritance==>extends keyword is imp
+
+      let myObja = new MyClassA();
+      let resulta = myObja.addition(1, 2); //1  and 2 are actual argument
+      console.log(resulta);
+
+      let myObjb = new MyClassB();
+      let resultb = myObjb.substraction(10, 6);
+      console.log(resultb);
+
+      let myObjc = new MyClassC();
+      let resultc = myObjc.multiplication(7, 7);
+      console.log(resultc);
+
+      let myObjd = new MyClassD();
+      let resultd = myObjd.division(25, 5);
+      console.log(resultd);
+
+      console.log(myObjd.addition(10, 6));
+      console.log(myObjd.substraction(26, 6));
+      console.log(myObjd.multiplication(26, 6));
+      console.log(myObjd.division(26, 6));
+    </script>
+  </body>
+</html>
